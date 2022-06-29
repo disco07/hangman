@@ -24,7 +24,7 @@ func main() {
 			os.Exit(1)
 		}
 		guess = l
-		fmt.Println(l)
+		g.MakeAGuess(guess)
 	}
 
 }
