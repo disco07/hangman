@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Golang/hangman"
 	"fmt"
+	"hangman/hangman"
 	"os"
 )
 
