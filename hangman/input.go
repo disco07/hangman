@@ -19,9 +19,10 @@ func ReadGuess() (guess string, err error) {
 		}
 		guess = strings.TrimSpace(guess)
 		if len(guess) != 1 {
-			fmt.Println("Lettre invalide !")
+			fmt.Printf("Lettre invalide !, letter=%v, len=%v\n", guess, len(guess))
 			continue
 		}
+		valid = true
 	}
 	return guess, err
 }
