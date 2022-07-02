@@ -4,13 +4,20 @@ import (
 	"testing"
 )
 
-func TestNewGame(t *testing.T) {
+func TestNewGameWork(t *testing.T) {
 	g, _ := New(8, "GOLANG")
 	letter := []string{"G", "O", "L", "A", "N", "G"}
 	for i, v := range g.Letters {
 		if v != letter[i] {
 			t.Errorf("Error: array word")
 		}
+	}
+}
+
+func TestNewGameNotWork(t *testing.T) {
+	_, err := New(8, "")
+	if err == nil {
+		t.Errorf("Invalid word to guess")
 	}
 }
 
