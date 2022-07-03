@@ -34,10 +34,10 @@ func drawState(g *Game, guess string) {
 	case "badGuess":
 		fmt.Printf("Bad guess, '%s' is not in the word\n", guess)
 	case "lost":
-		fmt.Print("You lost :( ! Teh word was: ")
+		fmt.Print("You lost :( ! The word was: ")
 		drawLetters(g.Letters)
 	case "won":
-		fmt.Print("You won! Teh word was: ")
+		fmt.Print("You won! The word was: ")
 		drawLetters(g.Letters)
 	}
 }

@@ -5,7 +5,7 @@ import (
 )
 
 func TestNewGameWork(t *testing.T) {
-	g, _ := New(8, "GOLANG")
+	g, _ := New(8, "golang")
 	letter := []string{"G", "O", "L", "A", "N", "G"}
 	for i, v := range g.Letters {
 		if v != letter[i] {
@@ -14,7 +14,7 @@ func TestNewGameWork(t *testing.T) {
 	}
 }
 
-func TestNewGameNotWork(t *testing.T) {
+func TestNewGameEmptyWord(t *testing.T) {
 	_, err := New(8, "")
 	if err == nil {
 		t.Errorf("Invalid word to guess")
